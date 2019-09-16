@@ -1,0 +1,1581 @@
+$colorText: #393e6b;
+$colorBg: #eff4f4;
+$colorLink: #0da088;
+$colorBgWhite: #ffffff;
+
+*{
+     margin: 0;
+     padding: 0;
+     font-family: 'Ubuntu';
+}
+/* ubuntu-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+         url('../fonts/ubuntu-v14-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/ubuntu-v14-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* ubuntu-italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Ubuntu Italic'), local('Ubuntu-Italic'),
+         url('../fonts/ubuntu-v14-latin_cyrillic-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/ubuntu-v14-latin_cyrillic-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* ubuntu-700 - latin_cyrillic */
+  @font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
+         url('../fonts/ubuntu-v14-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/ubuntu-v14-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+//mobile version
+@media (min-width: 320px) and (max-width: 760px){
+     .header{
+          background-color: #ffffff; 
+          .container{
+               display: flex;
+               margin: 0 auto;
+               align-items: center;
+          }
+          .intro{
+               display: none;
+          }
+     }
+     .navbar{
+          display: flex;
+          box-sizing: border-box;
+          padding: 40px 0 44px;
+          margin-left: 17%;
+          margin-right: 1%;
+          a{
+               text-decoration: none;
+               color: $colorText;
+               padding: 0 8px;
+          }
+          .topnav a{
+               display: none;
+               
+          }
+     }
+     .topnav.responsive{
+          position: relative;
+          top: 50px;
+          right: -200px;
+     }
+     header .topnav.responsive{
+          height: 340px;
+     }
+     .topnav a.icon__menu{
+          float: left;
+          display: block;
+          color: #3fd6bc;
+          font-size: 35px;
+     }
+     .logo{
+          margin-left: 125px;
+     }
+     h1{
+          color:$colorText;
+          margin-top: 88px;
+          text-transform: uppercase;
+          font-size: 30px;
+          font-weight: bold;
+     }
+     
+     .wrapper{
+          width: 600px;
+          margin-left: 64px;
+     }
+     
+     .install{
+          background-color: $colorBg;
+          padding-top: 44px;
+          padding-bottom: 68px;
+          //background-size: cover;
+          width: 760px;
+          .install__text{
+               font-weight: 26px;
+               color: #74757b;
+               margin-top: 66px;
+          }
+     }
+     .install__button{
+          width: 624px;
+          height: 90px;
+          border-radius: 46px;
+          margin-top: 59px;
+          text-transform: uppercase;
+     }
+     
+     .button__try{
+          background-color: #2cd3b8;
+          border: none;
+          margin-right: 20px;
+     }
+     .button__tarif{
+          background-color: rgba(44, 211, 184, 0);
+          border: 1px solid $colorText;
+          margin-top: 32px;
+     }
+     
+     //Install__simple
+     .install__simple{
+          background: $colorBgWhite;
+          padding-top: 75px;
+          padding-bottom: 88px;
+
+          h2{
+               font-size: 28px;
+               text-transform: uppercase;
+               color: $colorText;
+               font-weight: bold;
+                ;
+          }
+          .install__simple-text{
+               text-transform: 16px;
+               color: #74757b;
+               margin-top: 30px;
+                ;
+          }
+     }
+     
+     .install__number{
+          font-size: 150px;
+          font-weight: bold;
+          color: #e1e2e9;
+          position: relative;
+          z-index: 0;
+          margin-top: 85px;
+     }
+     .install__simple-wrapp{
+          display: flex;
+          .install__simple-box{
+               margin-top: 125px;
+               margin-right: 90px;
+               display: flex;
+               flex-direction: column;
+               margin-left: -41px;
+               padding-top: 25px;
+          }
+          .install__simple-icon{
+               fill: #363b66;
+               margin-bottom: 55px;
+               z-index: 1;
+          }
+          
+     }
+     .install__simple-word{
+          color: $colorLink;
+          font-size: 18px;
+          text-decoration: underline $colorLink;
+          margin-top: 29px;
+     }
+     
+     //Install__code
+     .install__code{
+          background: $colorBg;
+          padding-top: 87px;
+          padding-bottom: 87px;
+          width: 760px;
+          h2{
+               font-size: 28px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+               max-width: 290px;
+          }
+     }
+     
+     .code__menu{
+          margin-top: 71px;
+          max-width: 330px;
+          .code__list{
+               padding-bottom: 53px;
+               color: #3b4269;
+               list-style-type: disc;
+               .code__list-text{
+                    color: $colorLink;
+                    text-decoration: underline;
+                    font-size: 24px;
+               }
+          }
+     }
+     .code__sublist{
+          margin-top: 17px;
+          li {
+               list-style-type: none;
+               font-weight: 30px;
+          }
+     }
+     
+     //install__app
+     .install__app{
+          background: $colorBgWhite;
+          padding-top: 74px;
+          padding-bottom: 80px;
+          .install__app-text{
+               font-size: 16px;
+               color: #74757b;
+               margin-top: 33px;
+          }
+          h2{
+               font-size: 30px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+          }
+     }
+     
+     //after__install
+     .after__install{
+          background: $colorBg;
+          padding-top: 74px;
+          padding-bottom: 71px;
+          width: 760px;
+          h2{
+               font-size: 25px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+          }
+          .install__app-text{
+               font-size: 16px;
+               color: #74757b;
+               margin-top: 24px;
+          }
+          .install__button{
+               color: #fafafa;
+               margin-top: 104px;
+          }
+          .button__tarif{
+               background-color: #3b4269;
+               margin-top: 32px;
+          }
+     }
+     .after__install-steps{
+          margin-top: 66px;
+          display: flex;
+          flex-direction: column;
+          .install-steps-list{
+               list-style-type: none;
+               padding-bottom: 66px;
+               font-size: 16px;
+               color: $colorText;
+               .list__box{
+                    display: flex;
+                    align-items: center;
+                    
+               }
+               span{
+                    font-size: 18px;
+                    font-weight: bold;
+               }
+          }
+     }
+     .install__steps-icon{
+          fill: #2cd3b8;
+          margin-right: 37px;
+     }
+     .st1{
+          fill: #ffffff;
+     }
+     
+     //channels
+     .channels{
+          color: $colorBgWhite;
+          padding-top: 60px;
+          padding-bottom: 60px;
+          .channels__text{
+               font-size: 18px;
+               color: $colorText;
+               margin-left: 0;
+               max-width: 646px;
+          }
+     }
+     
+     .channels__links{
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 65px;
+          max-width: 1024px;
+          .channels__link{
+               text-decoration: underline;
+               width: 282px;
+               max-height: 70px;
+               margin-right: 50px;
+               margin-top: 43px;
+               display: flex;
+               align-items: center;
+               .yad{
+                    width: 37px;
+                    height: 40px;
+               }
+               .fa {
+                    color: black;
+               }
+               a{
+                    font-size: 18px;
+                    color: #0da088;
+                    margin-left: 29px;
+               }
+          }
+     }
+     #social{
+          fill: #3b4269;
+     }
+     #form{
+          fill:#dab81a;
+     }
+     #chat{
+          fill: #88bc17;
+     }
+     #messenger{
+          fill: #3dd3a1;
+     }
+     #mail{
+          fill: #5f98d1;
+     }
+     #chatbot{
+          fill: #33afd1;
+     }
+     //footer
+     .footer{
+          background: $colorText;
+          width: 760px;
+          .footer__block{
+               float: left;
+               padding: 0;
+               box-sizing: border-box;
+          }    
+     }
+     .footer__wrapp{
+          width: 100%;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 40px 12px;
+          box-sizing: inherit;
+          .footer__wrapp-copyright{
+               color: #c0c3d3;
+               width: 24%;
+               margin-right: 40px;
+               font-weight: 24px;
+               text-align: center;
+               margin-left: 65px;
+          }
+     }
+     .adress__phones, .footer__logo, .footer__icons, .contacts{
+          display: none;
+     }
+
+}
+
+//tab version
+@media (min-width: 761px) and (max-width: 1219px){
+     .header{
+          background-color: #ffffff; 
+          .container{
+               display: flex;
+               margin: 0 auto;
+               align-items: center;
+          }
+          .intro{
+               display: none;
+          }
+     }
+     .navbar{
+          display: flex;
+          box-sizing: border-box;
+          padding: 40px 0 44px;
+          margin-left: 17%;
+          margin-right: 1%;
+          a{
+               text-decoration: none;
+               color: $colorText;
+               padding: 0 8px;
+          }
+          .topnav a{
+               display: none;
+               
+          }
+     }
+     .topnav a.icon__menu{
+          float: left;
+          display: block;
+          color: #3fd6bc;
+          font-size: 35px;
+     }
+     .logo{
+          margin-left: 125px;
+     }
+     h1{
+          color:$colorText;
+          margin-top: 88px;
+          text-transform: uppercase;
+          font-size: 36px;
+          font-weight: bold;
+     }
+     
+     .wrapper{
+          max-width: 1024px;
+          margin-left: 130px;
+     }
+     
+     .install{
+          background-color: $colorBg;
+          background-size: 100%;
+          padding-top: 44px;
+          padding-bottom: 68px;
+          .install__text{
+               max-width: 668px;
+               text-transform: 16px;
+               color: #74757b;
+               margin-top: 44px;
+          }
+     }
+     .install__button{
+          width: 256px;
+          height: 48px;
+          border-radius: 25px;
+          margin-top: 59px;
+          text-transform: uppercase;
+     }
+     
+     .button__try{
+          background-color: #2cd3b8;
+          border: none;
+          margin-right: 20px;
+     }
+     .button__tarif{
+          background-color: rgba(44, 211, 184, 0);
+          border: 1px solid $colorText;
+          
+     }
+     
+     //Install__simple
+     .install__simple{
+          background: $colorBgWhite;
+          padding-top: 75px;
+          padding-bottom: 88px;
+     
+          h2{
+               font-size: 30px;
+               text-transform: uppercase;
+               color: $colorText;
+               font-weight: bold;
+          }
+          .install__simple-text{
+               text-transform: 16px;
+               color: #74757b;
+               margin-top: 30px;
+          }
+     }
+     
+     .install__number{
+          font-size: 150px;
+          font-weight: bold;
+          color: #e1e2e9;
+          position: relative;
+          margin-left: -41px;
+          z-index: 0;
+          margin-top: 85px;
+     }
+     .install__simple-wrapp{
+          display: flex;
+          .install__simple-box{
+               margin-top: 125px;
+               margin-right: 145px;
+               display: flex;
+               flex-direction: column;
+               margin-left: -41px;
+               padding-top: 25px;
+          }
+          .install__simple-icon{
+               fill: #363b66;
+               margin-bottom: 55px;
+               z-index: 1;
+          }
+          
+     }
+     
+     .install__simple-word{
+          color: $colorLink;
+          font-size: 18px;
+          text-decoration: underline $colorLink;
+          margin-top: 29px;
+     }
+     
+     //Install__code
+     .install__code{
+          background: $colorBg;
+          padding-top: 87px;
+          padding-bottom: 87px;
+          h2{
+               font-size: 30px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+          }
+     }
+     
+     .code__menu{
+          margin-top: 71px;
+          .code__list{
+               padding-bottom: 53px;
+               color: #3b4269;
+               list-style-type: disc;
+               .code__list-text{
+                    color: $colorLink;
+                    text-decoration: underline;
+                    font-size: 24px;
+               }
+          }
+     }
+     .code__sublist{
+          margin-top: 17px;
+          li {
+               list-style-type: none;
+          }
+     }
+     
+     //install__app
+     .install__app{
+          background: $colorBgWhite;
+          padding-top: 74px;
+          padding-bottom: 80px;
+          .install__app-text{
+               font-size: 16px;
+               color: #74757b;
+               margin-top: 33px;
+          }
+          h2{
+               font-size: 30px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+     
+          }
+     }
+     
+     //after__install
+     .after__install{
+          background: $colorBg;
+          padding-top: 74px;
+          padding-bottom: 71px;
+          h2{
+               font-size: 25px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+          }
+          .install__app-text{
+               font-size: 16px;
+               color: #74757b;
+               margin-top: 24px;
+          }
+          .install__button{
+               color: #fafafa;
+               margin-top: 104px;
+          }
+          .button__tarif{
+               background-color: #3b4269;
+          }
+     }
+     .after__install-steps{
+          margin-top: 66px;
+          display: flex;
+          flex-direction: column;
+          .install-steps-list{
+               list-style-type: none;
+               padding-bottom: 66px;
+               font-size: 17px;
+               color: $colorText;
+               
+               .list__box{
+                    display: flex;
+                    align-items: center;
+                    
+               }
+               span{
+                    font-size: 18px;
+                    font-weight: bold;
+               }
+          }
+     }
+     .install__steps-icon{
+          fill: #2cd3b8;
+          margin-right: 37px;
+     }
+     .st1{
+          fill: #ffffff;
+     }
+     
+     //channels
+     .channels{
+          color: $colorBgWhite;
+          padding-top: 60px;
+          padding-bottom: 60px;
+          .channels__text{
+               font-size: 18px;
+               color: $colorText;
+               margin-left: 0;
+               max-width: 646px;
+          }
+     }
+     
+     .channels__links{
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 65px;
+          max-width: 1024px;
+          .channels__link{
+               text-decoration: underline;
+               width: 282px;
+               max-height: 70px;
+               margin-right: 50px;
+               margin-top: 43px;
+               display: flex;
+               align-items: center;
+               .yad{
+                    width: 37px;
+                    height: 40px;
+               }
+               .fa {
+                    color: black;
+               }
+               a{
+                    font-size: 18px;
+                    color: #0da088;
+                    margin-left: 29px;
+               }
+          }
+     }
+     #social{
+          fill: #3b4269;
+     }
+     #form{
+          fill:#dab81a;
+     }
+     #chat{
+          fill: #88bc17;
+     }
+     #messenger{
+          fill: #3dd3a1;
+     }
+     #mail{
+          fill: #5f98d1;
+     }
+     #chatbot{
+          fill: #33afd1;
+     }
+     //footer
+     .footer{
+          background: $colorText;
+          width: 100%;
+          height: auto;
+          min-height: 300px;
+     
+          .footer__block{
+               float: left;
+               padding: 0;
+               box-sizing: border-box;
+          }    
+     }
+     .footer__wrapp{
+          width: 100%;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 40px 12px;
+          box-sizing: inherit;
+          .footer__wrapp-copyright{
+               color: #c0c3d3;
+               width: 24%;
+               margin-right: 40px;
+               .footer__logo{
+                    height: 43px;
+                    box-sizing: border-box;
+                    display: block;
+                    text-decoration: none;
+                    padding: 5px 0;
+                    margin-bottom: 15px;
+               }
+          }
+     }
+     .adress__phones{
+          width: 38%;
+          margin-right: 100px;
+          a{
+               text-decoration: none;
+               color: #ffffff;
+          }
+          .general__phone{
+               width: 100%;
+               font-size: 1.5rem;
+               line-height: 1.5rem;
+               font-weight: 500;
+               color: #fff;
+               margin-bottom: 10px;
+               
+          }
+          .phone{
+               width: 100%;
+               font-size: 1.25rem;
+               line-height: 1.25rem;
+               font-weight: 500;
+               color: #ffffff;
+               margin-bottom: 7px;
+          }
+          .adress{
+               width: 100%;
+               font-size: 1rem;
+               line-height: 1rem;
+               font-weight: 300;
+               color: #c0c3d3;
+               margin-bottom: 25px;
+          }
+          .phone__icon{
+               fill: #69d2bf;
+          }
+     }
+     .contacts{
+          width: 8%;
+          margin-right: 0;
+          .mail{
+               width: 100%;
+               display: block;
+               font-size: 1rem;
+               line-height: 1.5rem;
+               font-weight: 500;
+               color: #ffffff;
+               text-decoration: none;
+          }
+          .regime{
+               margin: 10px 0 15px;
+               font-size: 1rem;
+               line-height: 1rem;
+               font-weight: 300;
+               color: #c0c3d3;
+          }
+     }
+     .footer__icons{
+          display: none;
+     }
+}
+
+
+//Desktop version
+@media (min-width: 1220px) and (max-width: 1622px){
+     .header{
+          background: url(../img/bg-header.png) center no-repeat / cover;
+          background-color: $colorBg; 
+          .container{
+               display: flex;
+               margin: 0 auto;
+               align-items: center;
+          }
+          .intro{
+               margin-left: 100px;
+               text-transform: uppercase;
+               width: 25%;
+               margin-right: 0;
+               a{
+                    padding: 0 18px;
+                    text-decoration: none;
+                    color: $colorText;
+               }
+          }
+          a:hover{
+               opacity: 0.7;
+          }
+     }
+     .navbar{
+          display: flex;
+          box-sizing: border-box;
+          padding: 40px 0 44px;
+          margin-left: 17%;
+          margin-right: 1%;
+          a{
+               text-decoration: none;
+               color: $colorText;
+               padding: 0 8px;
+          }
+          .topnav{
+               text-align: center;
+               text-transform: uppercase;
+               font-size: 14px;
+               .icon__menu{
+                    display: none;
+               }
+          }
+     }
+     .logo{
+          margin-right: 1%;
+     }
+     h1{
+          color:$colorText;
+          margin-top: 88px;
+          text-transform: uppercase;
+          font-size: 36px;
+          font-weight: bold;
+     }
+     
+     .wrapper{
+          max-width: 1024px;
+          margin-left: 327px;
+     }
+     
+     .install{
+          background-color: $colorBg;
+          background-size: 100%;
+          padding-top: 44px;
+          padding-bottom: 68px;
+          .install__text{
+               max-width: 668px;
+               text-transform: 16px;
+               color: #74757b;
+               margin-top: 44px;
+          }
+     }
+     .install__button{
+          width: 256px;
+          height: 48px;
+          border-radius: 25px;
+          margin-top: 59px;
+          text-transform: uppercase;
+     }
+     
+     .button__try{
+          background-color: #2cd3b8;
+          border: none;
+          margin-right: 20px;
+     }
+     .button__tarif{
+          background-color: rgba(44, 211, 184, 0);
+          border: 1px solid $colorText;
+          
+     }
+     
+     //Install__simple
+     .install__simple{
+          background: $colorBgWhite;
+          padding-top: 75px;
+          padding-bottom: 88px;
+     
+          h2{
+               font-size: 30px;
+               text-transform: uppercase;
+               color: $colorText;
+               font-weight: bold;
+          }
+          .install__simple-text{
+               text-transform: 16px;
+               color: #74757b;
+               margin-top: 30px;
+          }
+     }
+     
+     .install__number{
+          font-size: 150px;
+          font-weight: bold;
+          color: #e1e2e9;
+          position: relative;
+          margin-left: -41px;
+          z-index: 0;
+          margin-top: 85px;
+     }
+     .install__simple-wrapp{
+          display: flex;
+          .install__simple-box{
+               margin-top: 125px;
+               margin-right: 145px;
+               display: flex;
+               flex-direction: column;
+               margin-left: -41px;
+               padding-top: 25px;
+          }
+          .install__simple-icon{
+               fill: #363b66;
+               margin-bottom: 55px;
+               z-index: 1;
+          }
+          
+     }
+     
+     .install__simple-word{
+          color: $colorLink;
+          font-size: 18px;
+          text-decoration: underline $colorLink;
+          margin-top: 29px;
+     }
+     
+     //Install__code
+     .install__code{
+          background: $colorBg;
+          padding-top: 87px;
+          padding-bottom: 87px;
+          h2{
+               font-size: 30px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+          }
+     }
+     
+     .code__menu{
+          margin-top: 71px;
+          .code__list{
+               padding-bottom: 53px;
+               color: #3b4269;
+               list-style-type: disc;
+               .code__list-text{
+                    color: $colorLink;
+                    text-decoration: underline;
+                    font-size: 24px;
+               }
+          }
+     }
+     .code__sublist{
+          margin-top: 17px;
+          li {
+               list-style-type: none;
+          }
+     }
+     
+     //install__app
+     .install__app{
+          background: $colorBgWhite;
+          padding-top: 74px;
+          padding-bottom: 80px;
+          .install__app-text{
+               font-size: 16px;
+               color: #74757b;
+               margin-top: 33px;
+          }
+          h2{
+               font-size: 30px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+     
+          }
+     }
+     
+     //after__install
+     .after__install{
+          background: $colorBg;
+          padding-top: 74px;
+          padding-bottom: 71px;
+          h2{
+               font-size: 30px;
+               color: $colorText;
+               text-transform: uppercase;
+               font-weight: bold;
+          }
+          .install__app-text{
+               font-size: 16px;
+               color: #74757b;
+               margin-top: 24px;
+          }
+          .install__button{
+               color: #fafafa;
+               margin-top: 104px;
+          }
+          .button__tarif{
+               background-color: #3b4269;
+          }
+     }
+     .after__install-steps{
+     
+          margin-top: 88px;
+          display: flex;
+          flex-direction: column;
+          
+          .install-steps-list{
+               list-style-type: none;
+               padding-bottom: 84px;
+               font-size: 22px;
+               color: $colorText;
+               
+               .list__box{
+                    display: flex;
+                    align-items: center;
+                    
+               }
+               span{
+                    font-weight: bold;
+                    font-size: 24px;
+               }
+          }
+     }
+     .install__steps-icon{
+          fill: #2cd3b8;
+          margin-right: 37px;
+     }
+     .st1{
+          fill: #ffffff;
+     }
+     
+     //channels
+     .channels{
+          color: $colorBgWhite;
+          padding-top: 66px;
+          padding-bottom: 88px;
+          .channels__text{
+               font-size: 18px;
+               color: $colorText;
+               margin-left: 0;
+               max-width: 646px;
+          }
+     }
+     
+     .channels__links{
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 73px;
+          max-width: 1024px;
+          .channels__link{
+               text-decoration: underline;
+               width: 282px;
+               max-height: 70px;
+               margin-right: 50px;
+               margin-top: 43px;
+               display: flex;
+               align-items: center;
+               .yad{
+                    width: 37px;
+                    height: 40px;
+               }
+               .fa {
+                    color: black;
+               }
+               a{
+                    font-size: 18px;
+                    color: #0da088;
+                    margin-left: 29px;
+               }
+          }
+     }
+     #social{
+          fill: #3b4269;
+     }
+     #form{
+          fill:#dab81a;
+     }
+     #chat{
+          fill: #88bc17;
+     }
+     #messenger{
+          fill: #3dd3a1;
+     }
+     #mail{
+          fill: #5f98d1;
+     }
+     #chatbot{
+          fill: #33afd1;
+     }
+     //footer
+     .footer{
+          background: $colorText;
+          width: 100%;
+          height: auto;
+          min-height: 300px;
+     
+          .footer__block{
+               float: left;
+               padding: 0;
+               box-sizing: border-box;
+          }    
+     }
+     .footer__wrapp{
+          width: 100%;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 50px 15px;
+          box-sizing: inherit;
+          .footer__wrapp-copyright{
+               color: #c0c3d3;
+               width: 24%;
+               margin-right: 80px;
+               .footer__logo{
+                    height: 43px;
+                    box-sizing: border-box;
+                    display: block;
+                    text-decoration: none;
+                    padding: 5px 0;
+                    margin-bottom: 15px;
+               }
+          }
+     }
+     .adress__phones{
+          width: 38%;
+          margin-right: 195px;
+          a{
+               text-decoration: none;
+               color: #ffffff;
+          }
+          .general__phone{
+               width: 100%;
+               font-size: 1.5rem;
+               line-height: 1.5rem;
+               font-weight: 500;
+               color: #fff;
+               margin-bottom: 10px;
+               
+          }
+          .phone{
+               width: 100%;
+               font-size: 1.25rem;
+               line-height: 1.25rem;
+               font-weight: 500;
+               color: #ffffff;
+               margin-bottom: 7px;
+          }
+          .adress{
+               width: 100%;
+               font-size: 1rem;
+               line-height: 1rem;
+               font-weight: 300;
+               color: #c0c3d3;
+               margin-bottom: 25px;
+          }
+          .phone__icon{
+               fill: #69d2bf;
+          }
+     }
+     .contacts{
+          width: 13%;
+          margin-right: 0;
+          .mail{
+               width: 100%;
+               display: block;
+               font-size: 1rem;
+               line-height: 1.5rem;
+               font-weight: 500;
+               color: #ffffff;
+               text-decoration: none;
+          }
+          .regime{
+               margin: 10px 0 15px;
+               font-size: 1rem;
+               line-height: 1rem;
+               font-weight: 300;
+               color: #c0c3d3;
+          }
+     }
+     .fa-vk, .fa-facebook, .fa-twitter, .fa-skype{
+          color: #adb0c2;
+          margin-right: 20px;
+     }
+}
+
+@media screen and (min-width: 1633px){
+.header{
+     background: url(../img/bg-header.png) center no-repeat / cover;
+     background-color: $colorBg; 
+     .container{
+          display: flex;
+          margin: 0 auto;
+          align-items: center;
+     }
+     .intro{
+          margin-left: 59px;
+          text-transform: uppercase;
+          width: 25%;
+          margin-right: 0;
+          a{
+               padding: 0 18px;
+               text-decoration: none;
+               color: $colorText;
+          }
+     }
+     a:hover{
+          opacity: 0.7;
+     }
+}
+.navbar{
+     display: flex;
+     box-sizing: border-box;
+     padding: 40px 0 44px;
+     margin-left: 29%;
+     margin-right: 1%;
+     a{
+          text-decoration: none;
+          color: $colorText;
+          padding: 0 8px;
+     }
+     .topnav{
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 16px;
+          .icon__menu{
+               display: none;
+          }
+     }
+}
+.logo{
+     margin-right: 1%;
+}
+h1{
+     color:$colorText;
+     margin-top: 88px;
+     text-transform: uppercase;
+     font-size: 36px;
+     font-weight: bold;
+}
+
+.wrapper{
+     max-width: 1024px;
+     margin-left: 327px;
+}
+
+.install{
+     background-color: $colorBg;
+     background-size: 100%;
+     padding-top: 44px;
+     padding-bottom: 68px;
+     .install__text{
+          max-width: 668px;
+          text-transform: 16px;
+          color: #74757b;
+          margin-top: 44px;
+     }
+}
+.install__button{
+     width: 256px;
+     height: 48px;
+     border-radius: 25px;
+     margin-top: 59px;
+     text-transform: uppercase;
+}
+
+.button__try{
+     background-color: #2cd3b8;
+     border: none;
+     margin-right: 20px;
+}
+.button__tarif{
+     background-color: rgba(44, 211, 184, 0);
+     border: 1px solid $colorText;
+     
+}
+
+//Install__simple
+.install__simple{
+     background: $colorBgWhite;
+     padding-top: 75px;
+     padding-bottom: 88px;
+
+     h2{
+          font-size: 30px;
+          text-transform: uppercase;
+          color: $colorText;
+          font-weight: bold;
+     }
+     .install__simple-text{
+          text-transform: 16px;
+          color: #74757b;
+          margin-top: 30px;
+     }
+}
+
+.install__number{
+     font-size: 150px;
+     font-weight: bold;
+     color: #e1e2e9;
+     position: relative;
+     margin-left: -41px;
+     z-index: 0;
+     margin-top: 85px;
+}
+.install__simple-wrapp{
+     display: flex;
+     .install__simple-box{
+          margin-top: 125px;
+          margin-right: 145px;
+          display: flex;
+          flex-direction: column;
+          margin-left: -41px;
+          padding-top: 25px;
+     }
+     .install__simple-icon{
+          fill: #363b66;
+          margin-bottom: 55px;
+          z-index: 1;
+     }
+     
+}
+
+.install__simple-word{
+     color: $colorLink;
+     font-size: 18px;
+     text-decoration: underline $colorLink;
+     margin-top: 29px;
+}
+
+//Install__code
+.install__code{
+     background: $colorBg;
+     padding-top: 87px;
+     padding-bottom: 87px;
+     h2{
+          font-size: 30px;
+          color: $colorText;
+          text-transform: uppercase;
+          font-weight: bold;
+     }
+}
+
+.code__menu{
+     margin-top: 71px;
+     .code__list{
+          padding-bottom: 53px;
+          color: #3b4269;
+          list-style-type: disc;
+          .code__list-text{
+               color: $colorLink;
+               text-decoration: underline;
+               font-size: 24px;
+          }
+     }
+}
+.code__sublist{
+     margin-top: 17px;
+     li {
+          list-style-type: none;
+     }
+}
+
+//install__app
+.install__app{
+     background: $colorBgWhite;
+     padding-top: 74px;
+     padding-bottom: 80px;
+     .install__app-text{
+          font-size: 16px;
+          color: #74757b;
+          margin-top: 33px;
+     }
+     h2{
+          font-size: 30px;
+          color: $colorText;
+          text-transform: uppercase;
+          font-weight: bold;
+
+     }
+}
+
+//after__install
+.after__install{
+     background: $colorBg;
+     padding-top: 74px;
+     padding-bottom: 71px;
+     h2{
+          font-size: 30px;
+          color: $colorText;
+          text-transform: uppercase;
+          font-weight: bold;
+     }
+     .install__app-text{
+          font-size: 16px;
+          color: #74757b;
+          margin-top: 24px;
+     }
+     .install__button{
+          color: #fafafa;
+          margin-top: 104px;
+     }
+     .button__tarif{
+          background-color: #3b4269;
+     }
+}
+.after__install-steps{
+
+     margin-top: 88px;
+     display: flex;
+     flex-direction: column;
+     
+     .install-steps-list{
+          list-style-type: none;
+          padding-bottom: 84px;
+          font-size: 22px;
+          color: $colorText;
+          
+          .list__box{
+               display: flex;
+               align-items: center;
+               
+          }
+          span{
+               font-weight: bold;
+               font-size: 24px;
+          }
+     }
+}
+.install__steps-icon{
+     fill: #2cd3b8;
+     margin-right: 37px;
+}
+.st1{
+     fill: #ffffff;
+}
+
+//channels
+.channels{
+     color: $colorBgWhite;
+     padding-top: 66px;
+     padding-bottom: 88px;
+     .channels__text{
+          font-size: 18px;
+          color: $colorText;
+          margin-left: 0;
+          max-width: 646px;
+     }
+}
+
+.channels__links{
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: 73px;
+     max-width: 1024px;
+     .channels__link{
+          text-decoration: underline;
+          width: 282px;
+          max-height: 70px;
+          margin-right: 50px;
+          margin-top: 43px;
+          display: flex;
+          align-items: center;
+          .yad{
+               width: 37px;
+               height: 40px;
+          }
+          .fa {
+               color: black;
+          }
+          a{
+               font-size: 18px;
+               color: #0da088;
+               margin-left: 29px;
+          }
+     }
+}
+#social{
+     fill: #3b4269;
+}
+#form{
+     fill:#dab81a;
+}
+#chat{
+     fill: #88bc17;
+}
+#messenger{
+     fill: #3dd3a1;
+}
+#mail{
+     fill: #5f98d1;
+}
+#chatbot{
+     fill: #33afd1;
+}
+//footer
+.footer{
+     background: $colorText;
+     width: 100%;
+     height: auto;
+     min-height: 300px;
+
+     .footer__block{
+          float: left;
+          padding: 0;
+          box-sizing: border-box;
+     }    
+}
+.footer__wrapp{
+     width: 100%;
+     max-width: 1280px;
+     margin: 0 auto;
+     padding: 50px 15px;
+     box-sizing: inherit;
+     .footer__wrapp-copyright{
+          color: #c0c3d3;
+          width: 24%;
+          margin-right: 80px;
+          .footer__logo{
+               height: 43px;
+               box-sizing: border-box;
+               display: block;
+               text-decoration: none;
+               padding: 5px 0;
+               margin-bottom: 15px;
+          }
+     }
+}
+.adress__phones{
+     width: 38%;
+     margin-right: 195px;
+     a{
+          text-decoration: none;
+          color: #ffffff;
+     }
+     .general__phone{
+          width: 100%;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          font-weight: 500;
+          color: #fff;
+          margin-bottom: 10px;
+          
+     }
+     .phone{
+          width: 100%;
+          font-size: 1.25rem;
+          line-height: 1.25rem;
+          font-weight: 500;
+          color: #ffffff;
+          margin-bottom: 7px;
+     }
+     .adress{
+          width: 100%;
+          font-size: 1rem;
+          line-height: 1rem;
+          font-weight: 300;
+          color: #c0c3d3;
+          margin-bottom: 25px;
+     }
+.phone__icon{
+     fill: #69d2bf;
+}
+}
+.contacts{
+     width: 13%;
+     margin-right: 0;
+     .mail{
+          width: 100%;
+          display: block;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          font-weight: 500;
+          color: #ffffff;
+          text-decoration: none;
+     }
+     .regime{
+          margin: 10px 0 15px;
+          font-size: 1rem;
+          line-height: 1rem;
+          font-weight: 300;
+          color: #c0c3d3;
+     }
+}
+.fa-vk, .fa-facebook, .fa-twitter, .fa-skype{
+     color: #adb0c2;
+     margin-right: 20px;
+}
+
+}
